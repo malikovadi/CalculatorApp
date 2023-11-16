@@ -44,7 +44,7 @@
          <Button layoutX="209.0" layoutY="95.0" mnemonicParsing="false" onAction="#onButtonMinusClick" prefHeight="31.0" prefWidth="55.0" style="-fx-background-color: orange;" text="-" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
          <Button layoutX="204.0" layoutY="135.0" mnemonicParsing="false" onAction="#onButtonMultiplyClick" prefHeight="31.0" prefWidth="55.0" style="-fx-background-color: orange;" text="*" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
          <Button layoutX="204.0" layoutY="175.0" mnemonicParsing="false" onAction="#onButtonDivideClick" prefHeight="31.0" prefWidth="55.0" style="-fx-background-color: orange;" text="/" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
-         <Button layoutX="204.0" layoutY="215.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="55.0" style="-fx-background-color: orange;" text="C" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+         <Button layoutX="204.0" layoutY="215.0" mnemonicParsing="false" onAction="#onButtonClearClick" prefHeight="31.0" prefWidth="55.0" style="-fx-background-color: orange;" text="C" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
          <Button layoutX="209.0" layoutY="215.0" mnemonicParsing="false" onAction="#onButtonEqualClick" prefHeight="31.0" prefWidth="55.0" style="-fx-background-color: orange;" text="=" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
       </children>
    </GridPane>

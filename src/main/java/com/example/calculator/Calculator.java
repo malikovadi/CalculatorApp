@@ -7,25 +7,26 @@ public class Calculator
     private char operator;
     private double result;
 
-    public void calculate()
+    public void calculate() throws DivisionByZeroException
     {
         if(operator == '+')
         {
             result = op1 + op2;
         }
-        if(operator == '-')
+        else if(operator == '-')
         {
             result = op1 - op2;
         }
-        if(operator == '*')
+        else if(operator == '*')
         {
+
             result = op1 * op2;
         }
-        if(operator == '/')
+        else if(operator == '/')
         {
             if(op2 == 0)
             {
-                result = Double.NaN;
+                throw new DivisionByZeroException("Cannot divide by zero.");
             }
             else
             {

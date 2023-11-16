@@ -41,28 +41,29 @@ public class HelloController
     }
 
     @FXML
-    protected void onButtonEqualClick(){
+    protected void onButtonEqualClick() {
 
         String secondInputString = inputField.getText();
         double secondInputDouble = Double.parseDouble(secondInputString);
 
         calc.setOp2(secondInputDouble);
 
-        calc.calculate();
-
-        double result = calc.getResult();
-
-        if(Double.isNaN(result))
+        try
         {
-            inputField.setText("Error");
+            calc.calculate();
+            double result = calc.getResult();
+            if (result == (int) result)
+            {
+                inputField.setText(Integer.toString((int) result));
+            }
+            else
+            {
+                inputField.setText(Double.toString(result));
+            }
         }
-        else if (result == (int) result)
+        catch (DivisionByZeroException e)
         {
-            inputField.setText(Integer.toString((int) result));
-        }
-        else
-        {
-            inputField.setText(Double.toString(result));
+            inputField.setText(e.getMessage());
         }
     }
 
