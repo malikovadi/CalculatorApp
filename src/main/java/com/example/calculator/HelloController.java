@@ -7,7 +7,7 @@ public class HelloController
     Calculator calc = new Calculator();
 
     @FXML
-    private TextField inputField;
+    protected TextField inputField;
 
     @FXML
     protected void onButtonPlusClick()
@@ -41,15 +41,13 @@ public class HelloController
     }
 
     @FXML
-    protected void onButtonEqualClick() {
+    protected void onButtonEqualClick(){
 
         String secondInputString = inputField.getText();
         double secondInputDouble = Double.parseDouble(secondInputString);
 
         calc.setOp2(secondInputDouble);
-
-        try
-        {
+        try {
             calc.calculate();
             double result = calc.getResult();
             if (result == (int) result)
@@ -60,11 +58,11 @@ public class HelloController
             {
                 inputField.setText(Double.toString(result));
             }
-        }
-        catch (DivisionByZeroException e)
-        {
+        } catch (DivisionByZeroException e) {
             inputField.setText(e.getMessage());
         }
+
+
     }
 
     @FXML
